@@ -859,13 +859,11 @@
     padding: 15px 40px;
     background: #FF7B47;
     border-radius: 5px;
-    & a {
-        font-weight: 700;
-        line-height: 200%;
-        text-align: center;
-        letter-spacing: 0.2px;
-        color: #FFFFFF;
-    }
+    font-weight: 700;
+    line-height: 200%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
@@ -883,5 +881,105 @@
     }
     .contact__button {
         width: 60%;
+    }
+}
+
+/*--------FOOTER-------------------------------------------------------------------------*/
+
+.footer__links {
+}
+
+/*--------LINKS-------------------------------------------------------------------------*/
+
+.links {
+    background: #17213C;
+}
+.links__container {
+    padding: 50px 15px;
+}
+.links__row {
+    display: flex;
+}
+.links__column {
+    display: flex;
+    flex-direction: column;
+    min-width: 152px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.links__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    margin: 0px 0px 20px 0px;
+}
+.links__list {
+    display: flex;
+    flex-direction: column;
+}
+.links__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    & a {
+        font-weight: 600;
+        line-height: 171%;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+    &_withicon {
+        display: flex;
+        align-items: center;
+        & img {
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 1023px) {
+    .links__row {
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+    }
+    .links__column {
+        & br {
+            display: none;
+        }
+        margin-bottom: 20px;
+    }
+    .links__title {
+        margin: 0px 0px 15px 0px;
+    }
+}
+@media (max-width: 757px) {
+    .links__column {
+        & br {
+            display: inline;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 515px) {
+    .links__list {
+        display: none;
+    }
+    ._show {
+        display: flex;
+        animation: growing 1s;
+    }
+    @keyframes growing {
+        from {
+            opacity: 0.1;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .links__column {
+        flex: 0 1 50%;
     }
 }
